@@ -27,6 +27,32 @@
   <meta property="og:image:height" content="512">
   <meta itemprop="image" content="https://websitere.github.io/umbrella/swapped_colors.webp">
 
+  <style>
+    /* تنسيق لتوسيط الشعار وجعل الخلفية مريحة */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: #f7f9fc;
+    }
+    .loading-container {
+      text-align: center;
+    }
+    .logo {
+      width: 100px; /* يمكنك التحكم في حجم الشعار من هنا */
+      height: auto;
+      animation: pulse 1.5s infinite ease-in-out;
+    }
+    /* تأثير نبض خفيف وجذاب للشعار أثناء الانتظار */
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+  </style>
+
   <!-- Meta Pixel Code -->
   <script>
     !function(f,b,e,v,n,t,s)
@@ -34,7 +60,7 @@
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
     if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
     n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
+    t.src=v;s=b.getElementsByTagName(e);
     s.parentNode.insertBefore(t,s)}(window, document,'script',
     'https://facebook.net');
     fbq('init', '1123573123391074');
@@ -45,14 +71,19 @@
   </noscript>
   <!-- End Meta Pixel Code -->
 
-  <!-- كود التحويل الآمن: ينتظر 600 جزء من الثانية ليتمكن البكسل من العمل أولاً -->
+  <!-- كود التحويل الآمن: ينتظر 800 جزء من الثانية ليتمكن البكسل من العمل ولتظهر حركة الشعار -->
   <script>
     setTimeout(function() {
       window.location.href = "https://wuaze.com";
-    }, 600);
+    }, 800);
   </script>
 </head>
 <body>
-  <p>جاري الانتقال    </p>
+
+  <div class="loading-container">
+    <!-- عرض صورة الشعار بدلاً من النص التلقائي -->
+    <img src="swapped_colors.webp" alt="Super Qi" class="logo">
+  </div>
+
 </body>
 </html>
